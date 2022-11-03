@@ -1,0 +1,11 @@
+name: Baton
+version: '${project.version}'
+main: xyz.hiziki.baton.Main
+api-version: 1.16
+prefix: Baton
+authors: [ ohaziki2 ]
+description: Admin can use batons.
+website: www.hiziki.xyz
+commands:
+  baton:
+    usage: /<command>
