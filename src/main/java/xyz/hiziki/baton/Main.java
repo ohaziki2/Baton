@@ -7,7 +7,7 @@ import xyz.hiziki.baton.event.EntityDamage;
 
 public final class Main extends JavaPlugin
 {
-    public static JavaPlugin plugin;
+    private static JavaPlugin plugin;
 
     @Override
     public void onEnable()
@@ -29,5 +29,10 @@ public final class Main extends JavaPlugin
         super.onDisable();
 
         getLogger().info("プラグインが停止したゾ");
+    }
+
+    public static JavaPlugin getPlugin()
+    {
+        return plugin;
     }
 }

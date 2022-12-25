@@ -12,7 +12,7 @@ import xyz.hiziki.baton.util.MetaSetting;
 
 public class BatonCommandExecutor implements CommandExecutor
 {
-    private final JavaPlugin plugin = Main.plugin;
+    private final JavaPlugin plugin = Main.getPlugin();
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args)
