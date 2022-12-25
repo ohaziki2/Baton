@@ -7,7 +7,7 @@ import org.bukkit.inventory.meta.ItemMeta;
 
 import java.util.Arrays;
 
-public class MetaSetting
+public class BatonMeta
 {
     public ItemStack itemStack()
     {

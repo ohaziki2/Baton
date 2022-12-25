@@ -5,7 +5,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
-import xyz.hiziki.baton.util.MetaSetting;
+import xyz.hiziki.baton.util.BatonMeta;
 
 public class BatonCommandExecutor implements CommandExecutor
 {
@@ -21,7 +21,7 @@ public class BatonCommandExecutor implements CommandExecutor
             if (sender.isOp())
             {
                 Player player = (Player) sender;
-                ItemStack baton = new MetaSetting().itemStack();
+                ItemStack baton = new BatonMeta().itemStack();
 
                 player.getInventory().addItem(baton);
             }

@@ -7,7 +7,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
-import xyz.hiziki.baton.util.MetaSetting;
+import xyz.hiziki.baton.util.BatonMeta;
 
 public class EntityDamage implements Listener
 {
@@ -20,7 +20,7 @@ public class EntityDamage implements Listener
         {
             Player player = (Player) attacker;
 
-            if (player.getInventory().getItemInMainHand() == new MetaSetting().itemStack())
+            if (player.getInventory().getItemInMainHand() == new BatonMeta().itemStack())
             {
                 if (!player.isOp())
                 {
