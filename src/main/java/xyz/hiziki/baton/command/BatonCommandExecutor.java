@@ -1,5 +1,6 @@
 package xyz.hiziki.baton.command;
 
+import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -18,7 +19,11 @@ public class BatonCommandExecutor implements CommandExecutor
         }
         else
         {
-            if (sender.isOp())
+            if (!sender.isOp())
+            {
+                sender.sendMessage(ChatColor.RED + "あなたはコマンドを実行するための権限を持っていません。");
+            }
+            else
             {
                 Player player = (Player) sender;
                 ItemStack baton = new BatonMeta().itemStack();
