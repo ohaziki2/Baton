@@ -7,14 +7,10 @@ import xyz.hiziki.baton.event.EntityDamage;
 
 public final class Main extends JavaPlugin
 {
-    private static JavaPlugin plugin;
-
     @Override
     public void onEnable()
     {
         super.onEnable();
-
-        plugin = this;
 
         getCommand("baton").setExecutor(new BatonCommandExecutor());
 
@@ -29,10 +25,5 @@ public final class Main extends JavaPlugin
         super.onDisable();
 
         getLogger().info("プラグインが停止したゾ");
-    }
-
-    public static JavaPlugin getPlugin()
-    {
-        return plugin;
     }
 }
