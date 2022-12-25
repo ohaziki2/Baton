@@ -25,8 +25,7 @@ public class BatonCommandExecutor implements CommandExecutor
 
                 player.getInventory().addItem(baton);
             }
-            return true;
         }
-        return false;
+        return true;
     }
 }
