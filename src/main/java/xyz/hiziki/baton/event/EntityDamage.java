@@ -20,7 +20,7 @@ public class EntityDamage implements Listener
         {
             Player player = (Player) attacker;
 
-            if (player.getItemInHand().getType() == Material.BLAZE_ROD)
+            if (player.getInventory().getItemInMainHand().getType() == Material.BLAZE_ROD)
             {
                 if (!player.isOp())
                 {
