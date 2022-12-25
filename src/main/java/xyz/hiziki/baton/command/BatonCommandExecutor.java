@@ -19,14 +19,7 @@ public class BatonCommandExecutor implements CommandExecutor
     {
         if (!(sender instanceof Player))
         {
-            if (sender instanceof ConsoleCommandSender)
-            {
-                plugin.getLogger().info("コマンドはプレイヤーしかつかえないぞ");
-            }
-            else
-            {
-                sender.sendMessage("コマンドはプレイヤーしかつかえないぞ");
-            }
+            sender.sendMessage("コマンドはプレイヤーしかつかえないぞ");
         }
         else
         {
