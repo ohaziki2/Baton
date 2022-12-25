@@ -1,10 +1,10 @@
 package xyz.hiziki.baton.command;
 
-import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import org.bukkit.inventory.ItemStack;
 import xyz.hiziki.baton.util.MetaSetting;
 
 public class BatonCommandExecutor implements CommandExecutor
@@ -21,7 +21,9 @@ public class BatonCommandExecutor implements CommandExecutor
             if (sender.isOp())
             {
                 Player player = (Player) sender;
-                new MetaSetting(Material.BLAZE_ROD, player, "警棒", "殴ったらKICKできる権力の棒", "Made IN Hiziki");
+                ItemStack baton = new MetaSetting().itemStack();
+
+                player.getInventory().addItem(baton);
             }
             return true;
         }
