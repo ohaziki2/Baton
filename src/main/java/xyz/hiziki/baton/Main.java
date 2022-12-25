@@ -12,6 +12,8 @@ public final class Main extends JavaPlugin
     @Override
     public void onEnable()
     {
+        super.onEnable();
+
         plugin = this;
 
         getCommand("baton").setExecutor(new BatonCommandExecutor());
@@ -24,6 +26,8 @@ public final class Main extends JavaPlugin
     @Override
     public void onDisable()
     {
+        super.onDisable();
+
         getLogger().info("プラグインが停止したゾ");
     }
 }
